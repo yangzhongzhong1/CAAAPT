@@ -1,0 +1,28 @@
+backend:
+  llm:
+    model: "deepseek-v2"
+    api_base: "https://api.deepseek.com/v1"
+    temperature: 0.1
+
+  knowledge_base:
+    structured_db_path: "data/knowledge_base/structured.db"
+    vector_db_path: "data/knowledge_base/vectors.faiss"
+    embedding_model: "bert-base-uncased"
+    hnsw_index_params:
+      M: 16
+      ef_construction: 200
+
+  retrieval:
+    top_k_structured: 5
+    top_k_vector: 3
+    alpha: 0.6  # Weight for structured vs vector retrieval
+
+  cot_stages:
+    - event_reconstruction
+    - tactic_alignment
+    - intent_inference
+    - confidence_evaluation
+
+  thresholds:
+    tau_back: 0.85  # Default confidence threshold
+    human_review_threshold: 0.75

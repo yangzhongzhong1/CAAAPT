@@ -1,0 +1,21 @@
+frontend:
+  xgboost:
+    n_estimators: 300
+    max_depth: 9
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.1
+    reg_lambda: 1.0
+    scale_pos_weight: 5.0  # For class imbalance
+
+  feature_extraction:
+    ngram_range: [2, 3]  # Bi-gram and Tri-gram
+    max_features: 10000
+    chi2_pvalue: 0.01
+    top_k_features: 5000
+
+  threshold:
+    tau_front: 0.7  # Default, will be tuned
+    adaptive: true
+    update_interval: 1000

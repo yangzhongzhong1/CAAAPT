@@ -1,21 +1,3 @@
-Important Notice
-This is a de-identified code release for Open Science purposes only.
-
-All code and configurations provided in this repository are sanitized versions intended solely to demonstrate the core algorithmic logic of CAAAPT. The following have been removed or anonymized:
-
-Proprietary optimization logic
-
-Production-specific components
-
-Sensitive prompt templates that could be used for adversarial evasion
-
-Internal API endpoints and credentials
-
-Benchmark-specific hardcoded paths
-
-These artifacts are sufficient for methodology understanding and reproduction of the results described in the paper, but do not represent the complete production system.
-
-
 CAAAPT/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
@@ -53,6 +35,25 @@ CAAAPT/
 └── scripts/
     ├── download_darpa.sh        # Download DARPA TC E3 dataset
     └── preprocess_trec.py       # Preprocess TREC dataset
+
+
+Important Notice
+This is a de-identified code release for Open Science purposes only.
+
+All code and configurations provided in this repository are sanitized versions intended solely to demonstrate the core algorithmic logic of CAAAPT. The following have been removed or anonymized:
+
+Proprietary optimization logic
+
+Production-specific components
+
+Sensitive prompt templates that could be used for adversarial evasion
+
+Internal API endpoints and credentials
+
+Benchmark-specific hardcoded paths
+
+These artifacts are sufficient for methodology understanding and reproduction of the results described in the paper, but do not represent the complete production system.
+
 
 
 Configuration
